@@ -92,6 +92,28 @@ body {
     height: calc(100vh - 70px);
 }
 
+.hero-tag {
+    color: #aaa;
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.hero-right h1 {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 15px 0 25px;
+}
+
+.hero-desc {
+    max-width: 420px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 35px;
+}
+
 /* LEFT IMAGE */
 .hero-left {
     width: 50%;
