@@ -121,10 +121,10 @@ body {
 .hero-left {
     flex: 0 1 380px;
     position: relative;
-    height: 420px;
-    border-radius: 16px;
+    height: 480px;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 25px 60px rgba(0, 255, 213, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .hero-left img {
@@ -132,31 +132,74 @@ body {
     height: 100%;
     object-fit: cover;
     filter: grayscale(100%) brightness(0.85);
-    transition: none;
-}
-
-.hero-left::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(0, 255, 213, 0.15) 0%, transparent 50%, rgba(0, 0, 0, 0.2) 100%);
-    z-index: 2;
-    pointer-events: none;
-}
-
-.hero-left::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border: 2px solid rgba(0, 255, 213, 0.2);
-    border-radius: 16px;
-    z-index: 3;
-    pointer-events: none;
+    transition: transform 0.3s ease;
 }
 
 .hero-left:hover img {
-    filter: grayscale(100%) brightness(0.85);
     transform: none;
+}
+
+/* IMAGE ZOOM MODAL */
+.image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: modalFadeIn 0.3s ease;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    animation: zoomInImage 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: grayscale(100%) brightness(0.85);
+}
+
+.image-modal .close-image {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10001;
+}
+
+.image-modal .close-image:hover {
+    color: #00ffd5;
+    transform: scale(1.2);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomInImage {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* RIGHT CONTENT */
