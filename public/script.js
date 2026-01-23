@@ -1,18 +1,17 @@
-// ================= NAVBAR TOGGLE =================
+/* ================= NAVBAR TOGGLE ================= */
 
-// Select elements
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-item");
 
-if (hamburger && navLinks) {
-    hamburger.addEventListener("click", function (event) {
-        event.stopPropagation();
+    // Toggle menu
+    hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navLinks.classList.toggle("active");
     });
 
-    // Close menu when link is clicked
-    const navItems = navLinks.querySelectorAll(".nav-item");
+    // Close menu when any link clicked
     navItems.forEach(item => {
         item.addEventListener("click", () => {
             hamburger.classList.remove("active");
@@ -21,21 +20,24 @@ if (hamburger && navLinks) {
     });
 
     // Close menu when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+    document.addEventListener("click", (e) => {
+        if (
+            !hamburger.contains(e.target) &&
+            !navLinks.contains(e.target)
+        ) {
             hamburger.classList.remove("active");
             navLinks.classList.remove("active");
         }
     });
-}
+});
 
-// ================= IMAGE MODAL =================
+/* ================= IMAGE MODAL ================= */
 
 const modalHTML = `
-<div id="photoModal" class="image-modal">
+  <div id="photoModal" class="image-modal">
     <span class="close-image">&times;</span>
-    <img id="modalImg">
-</div>
+    <img id="modalImg" />
+  </div>
 `;
 
 document.body.insertAdjacentHTML("beforeend", modalHTML);
@@ -49,8 +51,12 @@ function openModal(img) {
     modal.classList.add("active");
 }
 
-closeBtn.onclick = () => modal.classList.remove("active");
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
 
-modal.onclick = e => {
-    if (e.target === modal) modal.classList.remove("active");
-};
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("active");
+    }
+});
