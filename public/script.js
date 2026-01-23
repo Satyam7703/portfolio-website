@@ -46,3 +46,14 @@ function openModal(img) {
 
 closeBtn.onclick = () => modal.classList.remove("active");
 modal.onclick = e => { if (e.target === modal) modal.classList.remove("active"); };
+
+// ================= NAVBAR TOGGLE =================
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+}

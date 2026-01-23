@@ -1888,3 +1888,46 @@ body {
         width: 100%;
     }
 }
+
+/* ================= MOBILE HERO FINAL FIX ================= */
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 90px;
+    }
+
+    .hero-left {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto 25px;
+    }
+
+    .hero-left img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+        object-fit: cover;
+        border-radius: 16px;
+        box-shadow: 0 15px 40px rgba(0, 255, 213, 0.2);
+    }
+
+    .hero-right {
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-desc {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-left {
+        max-width: 240px;
+    }
+
+    .hero-left img {
+        max-height: 280px;
+    }
+}
