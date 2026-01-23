@@ -12,9 +12,14 @@
 <body>
 
     <header class="navbar">
-        <div class="logo">SATYAM MISHRA</div>
-        <nav class="nav-links">
-            <a href="/index.html" class="nav-item">
+        <div class="logo">Satyam Mishra</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-links" id="navLinks">
+            <a href="/" class="nav-item">
                 <i class="fa-solid fa-home"></i>
                 <span>Home</span>
             </a>
@@ -26,7 +31,7 @@
                 <i class="fa-solid fa-user"></i>
                 <span>About Me</span>
             </a>
-            <a class="nav-item active" href="/contact.html">
+            <a href="/contact.html" class="nav-item active">
                 <i class="fa-solid fa-envelope"></i>
                 <span>Contact</span>
             </a>
@@ -34,62 +39,105 @@
     </header>
 
     <section class="contact-section">
+        <!-- Hero Header -->
+        <div class="contact-hero">
+            <div class="hero-content">
+                <span class="hero-label">Let's Connect</span>
+                <h1>Get In <span class="gradient-text">Touch</span></h1>
+                <p class="hero-desc">I'd love to hear from you! Whether you have a project in mind, want to collaborate,
+                    or just want to say hello, feel free to reach out.</p>
+            </div>
+            <div class="hero-decoration">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+                <div class="decoration-circle circle-3"></div>
+            </div>
+        </div>
+
+        <!-- Main Contact Container -->
         <div class="contact-container">
-
+            <!-- Left Column - Contact Info -->
             <div class="contact-left">
-                <h1>Get In Touch</h1>
-                <p>
-                    If you want to collaborate, hire me, or just say hello —
-                    feel free to reach out anytime.
-                </p>
+                <div class="contact-info-group">
+                    <h2>Contact Information</h2>
+                    <p>Reach me through any of these channels. I typically respond within 24 hours.</p>
+
+                    <!-- Contact Cards -->
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="card-icon email-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Email</h3>
+                                <a href="mailto:mishrasatyam08885@gmail.com" class="contact-link">
+                                    mishrasatyam08885@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="card-icon phone-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Phone</h3>
+                                <a href="tel:+919703068894" class="contact-link">
+                                    +91 7703068894
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="card-icon location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Location</h3>
+                                <p class="contact-text">India</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="card-icon time-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Response Time</h3>
+                                <p class="contact-text">Within 24 Hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-section">
+                    <h2>Follow Me</h2>
+                    <p>Connect with me on social media</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/satyam__mishra1" target="_blank" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://github.com/Satyam7703" target="_blank" class="social-link github">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="social-link facebook">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="contact-right">
+    <script src="/script.js"></script>
+</body>
 
-                <div class="contact-card">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div>
-                        <h3>Email</h3>
-                        <a href="mailto:satyammishra@gmail.com">mishrasatyam08885@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <h3>Phone</h3>
-                        <a href="tel:+919876543210">+91 7703068894</a>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <i class="fa-brands fa-instagram"></i>
-                    <div>
-                        <h3>Instagram</h3>
-                        <a href="https://instagram.com/your_instagram_id" target="_blank">
-                            satyam__mishra1
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <i class="fa-brands fa-facebook"></i>
-                    <div>
-                        <h3>Facebook</h3>
-                        <a href="https://facebook.com/your_facebook_id" target="_blank">
-                            Satyam Kumar Mishra
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <i class="fa-brands fa-github"></i>
-                    <div>
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/Satyam7703" target="_blank">
-                            github.com/Satyam7703
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+</html>

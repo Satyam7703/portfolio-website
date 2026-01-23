@@ -2,19 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>About Me | Satyam Mishra</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-
+    <!-- Navbar -->
     <header class="navbar">
-        <div class="logo">SATYAM MISHRA</div>
-        <nav class="nav-links">
-            <a href="/index.html" class="nav-item">
+        <div class="logo">Satyam Mishra</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-links" id="navLinks">
+            <a href="/" class="nav-item">
                 <i class="fa-solid fa-home"></i>
                 <span>Home</span>
             </a>
@@ -22,7 +27,7 @@
                 <i class="fa-solid fa-image"></i>
                 <span>Photo</span>
             </a>
-            <a class="nav-item active" href="/about.html">
+            <a href="/about.html" class="nav-item active">
                 <i class="fa-solid fa-user"></i>
                 <span>About Me</span>
             </a>
@@ -34,55 +39,205 @@
     </header>
 
     <section class="about-section">
+        <!-- Hero Header -->
+        <div class="about-hero">
+            <div class="hero-content">
+                <span class="hero-label">Get To Know Me</span>
+                <h1>About <span class="gradient-text">Satyam Mishra</span></h1>
+                <p class="hero-desc">Building the future, one line of code at a time</p>
+            </div>
+            <div class="hero-decoration">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+                <div class="decoration-circle circle-3"></div>
+            </div>
+        </div>
+
+        <!-- Main About Container -->
         <div class="about-container">
-
+            <!-- Left Column - Story & Info -->
             <div class="about-left">
-                <h1>About Me</h1>
-                <p class="about-intro">
-                    Hi, I’m <b>Satyam Mishra</b> — a passionate web developer who loves
-                    creating clean, modern and user-friendly digital experiences.
-                </p>
+                <!-- Story Card -->
+                <div class="story-card">
+                    <div class="story-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <div class="story-content">
+                        <h2>My Story</h2>
+                        <p>
+                            I'm a dedicated B.Tech CSE student in my 3rd year, passionate about transforming ideas into
+                            elegant digital solutions.
+                            My journey in web development began with curiosity and has evolved into a professional
+                            pursuit of excellence.
+                            I believe every project is an opportunity to learn, innovate, and create impact.
+                        </p>
+                    </div>
+                </div>
 
-                <p>
-                    I am currently pursuing <b>B.Tech (3rd Year)</b> in
-                    <b>Computer Science & Engineering (CSE)</b>.
-                    I enjoy learning new technologies and building real-world projects.
-                </p>
+                <!-- Mission Card -->
+                <div class="story-card mission-card">
+                    <div class="story-icon mission-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="story-content">
+                        <h2>My Mission</h2>
+                        <p>
+                            To create user-centric web applications that solve real problems and deliver exceptional
+                            experiences.
+                            I'm committed to writing clean, efficient code and staying updated with the latest
+                            technologies in web development.
+                        </p>
+                    </div>
+                </div>
 
-                <p>
-                    My goal is to become a <b>professional full-stack developer</b> and
-                    work on impactful products that solve real problems.
-                </p>
-
-                <div class="about-buttons">
-                    <a href="/contact.html" class="btn">Contact Me</a>
-                    <a href="/photos.html" class="btn btn-outline">View Photos</a>
+                <!-- Vision Card -->
+                <div class="story-card vision-card">
+                    <div class="story-icon vision-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="story-content">
+                        <h2>My Vision</h2>
+                        <p>
+                            To become a skilled Full Stack Developer who bridges the gap between design and
+                            functionality.
+                            I aspire to work on innovative projects that challenge me to grow and contribute to building
+                            a better digital world.
+                        </p>
+                    </div>
                 </div>
             </div>
 
+            <!-- Right Column - Stats & Skills -->
             <div class="about-right">
-                <div class="info-card">
-                    <h3>Education</h3>
-                    <p>B.Tech – Computer Science & Engineering</p>
-                    <span>3rd Year Student</span>
+                <!-- Stats Section -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-number">3<span class="stat-unit">+</span></div>
+                        <div class="stat-label">Years in Tech</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15<span class="stat-unit">+</span></div>
+                        <div class="stat-label">Projects Done</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100<span class="stat-unit">%</span></div>
+                        <div class="stat-label">Dedication</div>
+                    </div>
                 </div>
 
-                <div class="info-card">
-                    <h3>Skills</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                    <p>Node.js, Express.js</p>
-                    <p>MongoDB</p>
+                <!-- Skills Section -->
+                <div class="skills-wrapper">
+                    <h3 class="section-title">Skills & Expertise</h3>
+
+                    <!-- Frontend Skills -->
+                    <div class="skill-group">
+                        <div class="skill-group-header">
+                            <span class="skill-icon"><i class="fas fa-palette"></i></span>
+                            <span class="skill-group-name">Frontend</span>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <span class="skill-bar-name">HTML5 / CSS3</span>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span class="skill-bar-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Skills -->
+                    <div class="skill-group">
+                        <div class="skill-group-header">
+                            <span class="skill-icon"><i class="fas fa-server"></i></span>
+                            <span class="skill-group-name">Backend</span>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <span class="skill-bar-name">Node.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span class="skill-bar-name">Express.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database Skills -->
+                    <div class="skill-group">
+                        <div class="skill-group-header">
+                            <span class="skill-icon"><i class="fas fa-database"></i></span>
+                            <span class="skill-group-name">Database</span>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <span class="skill-bar-name">MongoDB</span>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="info-card">
-                    <h3>Career Goal</h3>
-                    <p>Become a professional full-stack developer </p>
+                <!-- CTA Box -->
+                <div class="cta-box">
+                    <h3>Ready to Work Together?</h3>
+                    <p>Let's discuss your project ideas and bring them to life!</p>
+                    <a href="/contact.html" class="cta-button">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+        </div>
 
+        <!-- Education Timeline -->
+        <div class="timeline-section">
+            <h2 class="timeline-title">Education & Growth</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h4>B.Tech Computer Science</h4>
+                        <p class="timeline-date">3rd Year | Current</p>
+                        <p class="timeline-desc">Pursuing advanced studies in CSE with focus on web development,
+                            databases, and software engineering principles.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h4>Full Stack Development Journey</h4>
+                        <p class="timeline-date">2022 - Present</p>
+                        <p class="timeline-desc">Developed expertise in modern web technologies including Node.js,
+                            Express, MongoDB, and responsive design.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h4>Technical Skills Mastery</h4>
+                        <p class="timeline-date">Continuous</p>
+                        <p class="timeline-desc">Always learning new technologies and best practices to stay ahead in
+                            the rapidly evolving tech landscape.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <script src="/script.js"></script>
 </body>
 
 </html>

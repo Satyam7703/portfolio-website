@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <title>Photos | Satyam Mishra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Main CSS -->
     <link rel="stylesheet" href="/style.css">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <header class="navbar">
-        <div class="logo">SATYAM MISHRA</div>
-        <nav class="nav-links">
-            <a href="/index.html" class="nav-item">
+        <div class="logo">Satyam Mishra</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-links" id="navLinks">
+            <a href="/" class="nav-item">
                 <i class="fa-solid fa-home"></i>
                 <span>Home</span>
             </a>
@@ -38,30 +38,26 @@
         </nav>
     </header>
 
-    <!-- PHOTO SECTION -->
     <section class="photo-section">
         <div class="photo-header">
             <h1>My Photography</h1>
             <p>A collection of moments captured through my lens</p>
         </div>
 
-        <!-- PHOTO GRID -->
         <div class="photo-grid">
             <script>
                 for (let i = 1; i <= 18; i++) {
                     document.write(`
-                        <div class="photo-item">
-                            <img src="/images/p${i}.jpg" alt="Photo ${i}" onclick="openModal(this)">
-                        </div>
-                    `);
+                    <div class="photo-item">
+                        <img src="/images/p${i}.jpg" onclick="openModal(this)">
+                    </div>
+                `);
                 }
             </script>
         </div>
     </section>
 
-    <!-- SCRIPT -->
     <script src="/script.js"></script>
-
 </body>
 
 </html>

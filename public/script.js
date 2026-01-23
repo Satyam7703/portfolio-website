@@ -1,3 +1,31 @@
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    const navItems = navLinks.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', function () {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
+
 const modalHTML = `
 <div id="photoModal" class="image-modal">
     <span class="close-image">&times;</span>
@@ -14,20 +42,7 @@ const closeBtn = document.querySelector(".close-image");
 function openModal(img) {
     modalImg.src = img.src;
     modal.classList.add("active");
-    document.body.style.overflow = "hidden";
 }
 
-function closeModal() {
-    modal.classList.remove("active");
-    document.body.style.overflow = "auto";
-}
-
-closeBtn.addEventListener("click", closeModal);
-
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeModal();
-});
-
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
-});
+closeBtn.onclick = () => modal.classList.remove("active");
+modal.onclick = e => { if (e.target === modal) modal.classList.remove("active"); };
