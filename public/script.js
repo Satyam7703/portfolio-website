@@ -1,30 +1,35 @@
-// Hamburger Menu Toggle
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+// ================= NAVBAR TOGGLE =================
+
+// Select elements
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
 
 if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+    hamburger.addEventListener("click", function (event) {
+        event.stopPropagation();
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
     });
 
-    // Close menu when a link is clicked
-    const navItems = navLinks.querySelectorAll('.nav-item');
+    // Close menu when link is clicked
+    const navItems = navLinks.querySelectorAll(".nav-item");
     navItems.forEach(item => {
-        item.addEventListener('click', function () {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+        item.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
         });
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', function (event) {
+    document.addEventListener("click", function (event) {
         if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
         }
     });
 }
+
+// ================= IMAGE MODAL =================
 
 const modalHTML = `
 <div id="photoModal" class="image-modal">
@@ -45,15 +50,7 @@ function openModal(img) {
 }
 
 closeBtn.onclick = () => modal.classList.remove("active");
-modal.onclick = e => { if (e.target === modal) modal.classList.remove("active"); };
 
-// ================= NAVBAR TOGGLE =================
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-if (hamburger && navLinks) {
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navLinks.classList.toggle("active");
-    });
-}
+modal.onclick = e => {
+    if (e.target === modal) modal.classList.remove("active");
+};

@@ -1935,3 +1935,32 @@ body {
         max-height: 280px;
     }
 }
+
+/* ===== FIX HERO MOBILE ALIGNMENT ===== */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .hero-left {
+        max-width: 90%;
+    }
+
+    .hero-left img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .hero-right {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-item {
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
