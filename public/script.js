@@ -1,33 +1,33 @@
-// OPEN IMAGE MODAL
-function openModal(img) {
-    const modal = document.getElementById("photoModal");
-    const modalImg = document.getElementById("modalImg");
+const modalHTML = `
+<div id="photoModal" class="image-modal">
+    <span class="close-image">&times;</span>
+    <img id="modalImg">
+</div>
+`;
 
-    modal.classList.add("active");
-    modal.style.display = "flex";
+document.body.insertAdjacentHTML("beforeend", modalHTML);
+
+const modal = document.getElementById("photoModal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".close-image");
+
+function openModal(img) {
     modalImg.src = img.src;
+    modal.classList.add("active");
     document.body.style.overflow = "hidden";
 }
 
-// CLOSE IMAGE MODAL
 function closeModal() {
-    const modal = document.getElementById("photoModal");
     modal.classList.remove("active");
-    modal.style.display = "none";
     document.body.style.overflow = "auto";
 }
 
-// CLOSE MODAL ON ESC KEY
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-        closeModal();
-    }
+closeBtn.addEventListener("click", closeModal);
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
 });
 
-// CLOSE MODAL WHEN CLICKING ON CLOSE BUTTON
-document.addEventListener("DOMContentLoaded", function () {
-    const closeBtn = document.querySelector(".close-modal");
-    if (closeBtn) {
-        closeBtn.addEventListener("click", closeModal);
-    }
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
 });
