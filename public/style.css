@@ -160,12 +160,12 @@ body {
     gap: 60px;
     padding: 80px 60px;
     min-height: calc(100vh - 70px);
-    background: linear-gradient(135deg, #0e0f11 0%, #161a19 100%);
+    background: #0e0f11;
 }
 
 .hero-left {
-    flex: 0 0 40%;
-    height: 100%;
+    background: none;
+    box-shadow: none;
 }
 
 .hero-left img {
@@ -174,7 +174,7 @@ body {
     object-fit: cover;
     border-radius: 16px;
     filter: grayscale(100%) brightness(0.85);
-    box-shadow: 0 20px 60px rgba(0, 255, 213, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
     transition: all 0.4s ease;
 }
 
