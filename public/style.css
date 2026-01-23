@@ -84,7 +84,7 @@ body {
 }
 
 /* Mobile Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .navbar {
         padding: 0 20px;
     }
@@ -1796,5 +1796,95 @@ body {
     .contact-info-group p,
     .social-section p {
         font-size: 13px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ================= SAFE MOBILE FIXES (ADD ONLY) ================= */
+
+/* Prevent horizontal scroll everywhere */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* HERO IMAGE PERFECT CENTER & FIT */
+.hero-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image responsive fix */
+.hero-left img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
+}
+
+/* Mobile hero alignment */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .hero-right {
+        align-items: center;
+    }
+
+    .hero-right h1 {
+        text-align: center;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .hero-left {
+        max-width: 220px;
+    }
+
+    .hero-left img {
+        border-radius: 14px;
+    }
+}
+
+/* Buttons full width on mobile */
+@media (max-width: 480px) {
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* PHOTO PAGE MOBILE FIX */
+.photo-section .photo-item img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+/* NAVBAR FIX FOR SMALL SCREENS */
+@media (max-width: 480px) {
+    .navbar {
+        width: 100%;
     }
 }
