@@ -1964,60 +1964,87 @@ body {
         width: 100%;
     }
 }
+
 /* ================= HAMBURGER FINAL FIX ================= */
 
 /* Ensure hamburger always clickable */
 .hamburger {
-  z-index: 2000;
+    z-index: 2000;
 }
 
 /* Mobile nav hidden by default */
 @media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: #0e0f11;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-    z-index: 1500;
-  }
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #0e0f11;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        z-index: 1500;
+    }
 
-  .nav-links.active {
-    max-height: 400px;
-  }
+    .nav-links.active {
+        max-height: 400px;
+    }
 }
 
 /* ================= REMOVE GREEN GLOW BEHIND IMAGE ================= */
 
 .hero-left,
 .hero-left * {
-  background: none !important;
-  box-shadow: none !important;
+    background: none !important;
+    box-shadow: none !important;
 }
 
 /* Only image shadow */
 .hero-left img {
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* ================= MOBILE HERO FINAL ALIGNMENT ================= */
 
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-  .hero-left {
-    max-width: 260px;
-    margin-bottom: 20px;
-  }
+    .hero-left {
+        max-width: 260px;
+        margin-bottom: 20px;
+    }
 
-  .hero-right {
-    align-items: center;
-  }
+    .hero-right {
+        align-items: center;
+    }
+}
+
+/* ===== REMOVE IMAGE BACK STRIP ISSUE ===== */
+
+/* Remove any background behind image */
+.hero {
+    background: #0e0f11 !important;
+}
+
+/* Ensure hero-left has no background layer */
+.hero-left {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Kill any pseudo element if present */
+.hero-left::before,
+.hero-left::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Image only, no overlay */
+.hero-left img {
+    background: transparent !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
