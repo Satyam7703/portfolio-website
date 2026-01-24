@@ -2048,3 +2048,44 @@ body {
     background: transparent !important;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
+
+/* ================= FINAL MOBILE IMAGE FIX ================= */
+
+@media (max-width: 768px) {
+
+    /* Remove unwanted top green bar */
+    .hero::before,
+    .hero::after {
+        display: none !important;
+    }
+
+    /* Hero spacing fix */
+    .hero {
+        padding-top: 80px !important;
+        min-height: auto !important;
+    }
+
+    /* Image container */
+    .hero-left {
+        max-width: 260px !important;
+        margin: 0 auto 20px !important;
+    }
+
+    /* IMAGE – NO CROP, FULL SHOW */
+    .hero-left img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        object-fit: contain !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .hero-left {
+        max-width: 220px !important;
+    }
+}
