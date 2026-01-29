@@ -181,7 +181,7 @@ body {
 
 .hero-left img:hover {
     filter: grayscale(30%) brightness(1);
-    box-shadow: 0 25px 80px rgba(0, 255, 213, 0.3);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
 }
 
 .hero-right {
@@ -1866,6 +1866,10 @@ body {
     .hero-left {
         max-width: 260px;
         margin: 0 auto 20px;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
     }
 
     .hero-left img {
@@ -1874,7 +1878,9 @@ body {
         max-height: 320px;
         object-fit: cover;
         border-radius: 16px;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
+        border: none !important;
+        outline: none !important;
     }
 
     .hero-right {
@@ -1894,11 +1900,18 @@ body {
 
     .hero-left {
         max-width: 220px;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
     }
 
     .hero-left img {
         max-height: 280px;
         border-radius: 14px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
+        border: none !important;
+        outline: none !important;
     }
 
     .hero-buttons {
