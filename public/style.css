@@ -1881,6 +1881,12 @@ body {
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
         border: none !important;
         outline: none !important;
+        filter: grayscale(100%) brightness(0.85) !important;
+    }
+
+    .hero-left img:hover {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
+        filter: grayscale(100%) brightness(0.85) !important;
     }
 
     .hero-right {
@@ -1912,6 +1918,12 @@ body {
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
         border: none !important;
         outline: none !important;
+        filter: grayscale(100%) brightness(0.85) !important;
+    }
+
+    .hero-left img:hover {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
+        filter: grayscale(100%) brightness(0.85) !important;
     }
 
     .hero-buttons {
