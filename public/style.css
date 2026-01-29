@@ -120,6 +120,10 @@ body {
         margin-bottom: 5px;
     }
 
+    .nav-item:first-child i {
+        display: none;
+    }
+
     .nav-item:hover {
         background: rgba(0, 255, 213, 0.15);
         color: #00ffd5;
@@ -1870,7 +1874,7 @@ body {
         max-height: 320px;
         object-fit: cover;
         border-radius: 16px;
-        box-shadow: 0 15px 40px rgba(0, 255, 213, 0.2);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     }
 
     .hero-right {
