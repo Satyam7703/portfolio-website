@@ -1,7 +1,3 @@
-body {
-    border: 5pxsolid red !important;
-}
-
 /* ========== RESET ========== */
 * {
     margin: 0;
@@ -13,6 +9,7 @@ body {
 body {
     background: #0e0f11;
     color: #fff;
+    overflow-x: hidden;
 }
 
 /* ========== NAVBAR ========== */
@@ -1803,30 +1800,15 @@ body {
     }
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-/* ================= SAFE MOBILE FIXES (ADD ONLY) ================= */
-
-/* Prevent horizontal scroll everywhere */
-html,
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
+/* ================= HERO IMAGE & MOBILE FINAL FIX ================= */
 
 /* HERO IMAGE PERFECT CENTER & FIT */
 .hero-left {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 /* Image responsive fix */
@@ -1835,137 +1817,10 @@ body {
     height: auto;
     max-height: 70vh;
     object-fit: cover;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Mobile hero alignment */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-left {
-        max-width: 260px;
-        margin: 0 auto;
-    }
-
-    .hero-right {
-        align-items: center;
-    }
-
-    .hero-right h1 {
-        text-align: center;
-    }
-}
-
-/* Extra small devices */
-@media (max-width: 480px) {
-    .hero-left {
-        max-width: 220px;
-    }
-
-    .hero-left img {
-        border-radius: 14px;
-    }
-}
-
-/* Buttons full width on mobile */
-@media (max-width: 480px) {
-    .hero-buttons {
-        width: 100%;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-    }
-}
-
-/* PHOTO PAGE MOBILE FIX */
-.photo-section .photo-item img {
-    object-fit: cover;
-    max-width: 100%;
-}
-
-/* NAVBAR FIX FOR SMALL SCREENS */
-@media (max-width: 480px) {
-    .navbar {
-        width: 100%;
-    }
-}
-
-/* ================= MOBILE HERO FINAL FIX ================= */
-
-@media (max-width: 768px) {
-    .hero {
-        padding-top: 90px;
-    }
-
-    .hero-left {
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto 25px;
-    }
-
-    .hero-left img {
-        width: 100%;
-        height: auto;
-        max-height: 320px;
-        object-fit: cover;
-        border-radius: 16px;
-        box-shadow: 0 15px 40px rgba(0, 255, 213, 0.2);
-    }
-
-    .hero-right {
-        text-align: center;
-        align-items: center;
-    }
-
-    .hero-desc {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-left {
-        max-width: 240px;
-    }
-
-    .hero-left img {
-        max-height: 280px;
-    }
-}
-
-/* ===== FIX HERO MOBILE ALIGNMENT ===== */
-@media (max-width: 768px) {
-    .hero {
-        min-height: 100vh;
-        justify-content: center;
-        padding-top: 20px;
-    }
-
-    .hero-left {
-        max-width: 90%;
-    }
-
-    .hero-left img {
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-    }
-
-    .hero-right {
-        padding-top: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-item {
-        justify-content: flex-start;
-        width: 100%;
-    }
-}
-
-/* ================= HAMBURGER FINAL FIX ================= */
+/* ================= HAMBURGER & NAV MOBILE FIX ================= */
 
 /* Ensure hamburger always clickable */
 .hamburger {
@@ -1989,103 +1844,64 @@ body {
     .nav-links.active {
         max-height: 400px;
     }
+
+    .nav-item {
+        justify-content: flex-start;
+        width: 100%;
+    }
 }
-
-/* ================= REMOVE GREEN GLOW BEHIND IMAGE ================= */
-
-.hero-left,
-.hero-left * {
-    background: none !important;
-    box-shadow: none !important;
-}
-
-/* Only image shadow */
-.hero-left img {
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6) !important;
-}
-
-/* ================= MOBILE HERO FINAL ALIGNMENT ================= */
 
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding-top: 90px;
     }
 
     .hero-left {
         max-width: 260px;
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
+    }
+
+    .hero-left img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+        object-fit: cover;
+        border-radius: 16px;
+        box-shadow: 0 15px 40px rgba(0, 255, 213, 0.2);
     }
 
     .hero-right {
         align-items: center;
     }
-}
 
-/* ===== REMOVE IMAGE BACK STRIP ISSUE ===== */
-
-/* Remove any background behind image */
-.hero {
-    background: #0e0f11 !important;
-}
-
-/* Ensure hero-left has no background layer */
-.hero-left {
-    background: transparent !important;
-    box-shadow: none !important;
-}
-
-/* Kill any pseudo element if present */
-.hero-left::before,
-.hero-left::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* Image only, no overlay */
-.hero-left img {
-    background: transparent !important;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-}
-
-/* ================= FINAL MOBILE IMAGE FIX ================= */
-
-@media (max-width: 768px) {
-
-    /* Remove unwanted top green bar */
-    .hero::before,
-    .hero::after {
-        display: none !important;
-    }
-
-    /* Hero spacing fix */
-    .hero {
-        padding-top: 80px !important;
-        min-height: auto !important;
-    }
-
-    /* Image container */
-    .hero-left {
-        max-width: 260px !important;
-        margin: 0 auto 20px !important;
-    }
-
-    /* IMAGE – NO CROP, FULL SHOW */
-    .hero-left img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
-        aspect-ratio: auto !important;
-        object-fit: contain !important;
-        background: transparent !important;
-        box-shadow: none !important;
+    .hero-desc {
+        font-size: 14px;
+        line-height: 1.6;
     }
 }
 
-/* Extra small phones */
 @media (max-width: 480px) {
+    .hero {
+        padding: 30px 15px;
+    }
+
     .hero-left {
-        max-width: 220px !important;
+        max-width: 220px;
+    }
+
+    .hero-left img {
+        max-height: 280px;
+        border-radius: 14px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
     }
 }
